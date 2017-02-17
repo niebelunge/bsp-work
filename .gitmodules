@@ -1,12 +1,27 @@
-[submodule "sources/meta-freescale-distro"]
-	path = sources/meta-freescale-distro
-	url = https://github.com/Freescale/meta-freescale-distro.git
-[submodule "sources/meta-fsl-arm"]
-	path = sources/meta-fsl-arm
-	url = git://git.yoctoproject.org/meta-fsl-arm
 [submodule "sources/poky"]
 	path = sources/poky
 	url = https://git.yoctoproject.org/git/poky.git
 [submodule "sources/meta-tq"]
 	path = sources/meta-tq
 	url = ../meta-tq.git
+[submodule "sources/meta-openembedded"]
+	path = sources/meta-openembedded
+	url = https://github.com/openembedded/meta-openembedded.git
+[submodule "sources/meta-fsl-arm-extra"]
+	path = sources/meta-fsl-arm-extra
+	url = https://github.com/Freescale/meta-fsl-arm-extra.git
+[submodule "sources/meta-fsl-demos"]
+	path = sources/meta-fsl-demos
+	url = git://github.com/Freescale/meta-fsl-demos.git
+[submodule "sources/meta-tq-distro-fsl"]
+	path = sources/meta-tq-distro-fsl
+	url = ../meta-tq-distro-fsl.git
+[submodule "sources/meta-freescale"]
+	path = sources/meta-freescale
+	url = https://git.yoctoproject.org/git/meta-freescale.git
+[submodule "sources/meta-freescale-3rdparty"]
+	path = sources/meta-freescale-3rdparty
+	url = https://github.com/Freescale/meta-freescale-3rdparty.git
+[submodule "sources/meta-freescale-distro"]
+	path = sources/meta-freescale-distro
+	url = https://github.com/Freescale/meta-freescale-distro.git
