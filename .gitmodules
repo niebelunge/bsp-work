@@ -7,12 +7,6 @@
 [submodule "sources/meta-openembedded"]
 	path = sources/meta-openembedded
 	url = https://github.com/openembedded/meta-openembedded.git
-[submodule "sources/meta-fsl-arm-extra"]
-	path = sources/meta-fsl-arm-extra
-	url = https://github.com/Freescale/meta-fsl-arm-extra.git
-[submodule "sources/meta-fsl-demos"]
-	path = sources/meta-fsl-demos
-	url = git://github.com/Freescale/meta-fsl-demos.git
 [submodule "sources/meta-tq-distro-fsl"]
 	path = sources/meta-tq-distro-fsl
 	url = ../meta-tq-distro-fsl.git
