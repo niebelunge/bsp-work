@@ -350,6 +350,25 @@ main () {
 			done
 			tar -cvzf ${DEPLOYDIR}/${ARCHIVE_BASENAME}.LIC.tar.gz -C $(pwd)/tmp/deploy licenses
 			tar -cvzf ${DEPLOYDIR}/${ARCHIVE_BASENAME}.SRC.tar.gz -C $(pwd)/tmp/deploy sources
+
+			mkdir ${DEPLOYDIR}/${ARCHIVE_BASENAME}.MIRROR.SRC
+			
+			SETTER=$(bitbake -e | grep ^"DL_DIR=")
+			export ${SETTER}
+
+			DL_DIR=${DL_DIR#\"*}
+			DL_DIR=${DL_DIR%\"*}
+
+			local ARCHIVED_SRC_PATH=$(ls -1 $(pwd)/tmp/deploy/sources/*/*/*)
+
+			for f in ${ARCHIVED_SRC_PATH}; do
+				local FILENAME="${DL_DIR}/$(basename ${f})"
+				if [ -e ${FILENAME} ]; then
+					cp "${FILENAME}" ${DEPLOYDIR}/${ARCHIVE_BASENAME}.MIRROR.SRC;
+				fi
+			done
+			tar -cvzf ${DEPLOYDIR}/${ARCHIVE_BASENAME}.MIRROR.SRC.tar.gz -C ${DEPLOYDIR} ${ARCHIVE_BASENAME}.MIRROR.SRC
+			rm -rf ${DEPLOYDIR}/${ARCHIVE_BASENAME}.MIRROR.SRC
 		fi
 	fi
 
